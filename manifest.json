@@ -1,32 +1,26 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
-  "version": "0.0.1",
-  "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-  "default_locale": "en",
-  "options_page": "src/options/index.html",
-  "page_action": {
-    "default_icon": "icons/icon19.png",
-    "default_title": "page action demo",
-    "default_popup": "src/page_action/page_action.html"
-  },
-  "permissions": [
-    "http://www.toodledo.com/tasks/*"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.google.com/*"
-      ],
-      "js": [
-        "src/inject/inject.js"
-      ]
-    }
-  ]
+    "name": "ChromeEndTime2",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Show toodledo end times. See http://blog.toodledotips.jp/?p=1625.",
+    "homepage_url": "https://github.com/kokuyouwind/ChromeEndTime2",
+    "update_url": "http://raw.githubusercontent.com/kokuyouwind/ChromeEndTime2/master/updates.xml",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": [
+        "http://toodledotips.jp/t/et2.js"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.toodledo.com/tasks/*"
+            ],
+            "js": [
+                "js/prototype.js", "src/inject/inject.js", "src/inject/endtime2.js"
+            ]
+        }
+    ]
 }

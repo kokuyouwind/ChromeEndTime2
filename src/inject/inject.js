@@ -1,13 +1,12 @@
-chrome.extension.sendMessage({}, function(response) {
-	var readyStateCheckInterval = setInterval(function() {
-	if (document.readyState === "complete") {
-		clearInterval(readyStateCheckInterval);
-
-		// ----------------------------------------------------------
-		// This part of the script triggers when page is done loading
-		console.log("Hello. This message was sent from scripts/inject.js");
-		// ----------------------------------------------------------
-
-	}
-	}, 10);
-});
+// from http://blog.toodledotips.jp/?p=1625
+tt_navi=1;
+tt_fnt=1;
+tt_top=450;
+tt_left=5;
+tt_wid=170;
+tt_lang='jp';
+tt_due=0;
+tt_star=0;
+tt_dot=2;
+tl_protocol='http';
+str='';
